@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+long X(int);
+long Y(int);
+
+long X(int n)
+{
+    if(n == 0)
+        return 1;
+    return X(n - 1) + Y(n - 1);
+}
+
+long Y(int n)
+{
+    if(n == 0)
+        return 0;
+    return 3*X(n - 1) + 2*Y(n - 1);
+}
+int main()
+{
+    int n;
+    printf("Nhap n "); scanf("%d", &n);
+
+    long kq1 = X(n);
+    long kq2 = Y(n);
+
+    printf("X(n) = %d, Y(n) = %d", kq1, kq2);
+
+    return 0;
+}
