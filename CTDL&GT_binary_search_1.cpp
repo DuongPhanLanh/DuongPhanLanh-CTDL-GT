@@ -30,7 +30,7 @@ int main() {
     if (tim == -1)
       printf("Khong tim thay %d trong mang", x);
      else
-      printf("%d co trong mang, o vi tri %d", x, tim);
+      printf("%d co trong mang, o vi tri thu %d", x, tim);
    
 
    return 0;
