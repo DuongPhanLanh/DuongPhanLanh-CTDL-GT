@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+void HOANVI(int &x, int &y) {
+	int tam = x;
+	x = y;
+	y = tam;
+}
+
+void sapXepTrucTiep(int a[], int n){
+	int i,j;
+	for(i=0; i<n-1; i++){
+		for(j=i+1; j<n; j++){
+			if(a[i]>a[j]){
+				HOANVI(a[i],a[j]);
+			}
+		}
+	}
+}
+
+
+
+int main()
+{
+	int a[6] = {41, 23, 4, 14, 56, 1};
+    sapXepTrucTiep(a, 6);
+	cout<<"Mang sau khi sap xep:"<<endl;
+	for(int i=0;i<6;i++){
+		cout<<a[i]<<" ";
+	}
+}
